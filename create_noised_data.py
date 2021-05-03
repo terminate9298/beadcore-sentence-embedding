@@ -31,7 +31,7 @@ def noise_sentence(sen , factor: float = .10) -> str:
 
 print('Creating Noised Data...')
 data = embeddings[:,:2] ## Change size here
-step_size = 1000000
+step_size = 100000
 starting_index = 0
 
 del embeddings

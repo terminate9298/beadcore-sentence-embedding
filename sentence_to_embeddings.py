@@ -15,7 +15,7 @@ print(f'Is Cuda Available {is_available()}')
 
 file_path = 'elastic_mysql_questions_new.csv'
 fractio_to_use = 1.0
-step_size = 100000 ## Change Step Size
+step_size = 10000 ## Change Step Size
 starting_index = 0
 
 

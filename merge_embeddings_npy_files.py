@@ -4,6 +4,7 @@
 
 import numpy as np
 import os
+np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
 
 filelist = next(os.walk('embeddings/'))[2]
 npylist = [np.load('embeddings/' + e, allow_pickle = True).tolist() for e in filelist]

@@ -11,7 +11,7 @@ noised_data = np.load('noise/embed_0.npy' , allow_pickle = True)
 npylist = np.load('embeddings_final.npy' , allow_pickle = True)
 
 
-threshold = .75 #.9
+threshold = .5 #.9
 count = 0
 acc = 0
 wrong = 0
@@ -30,7 +30,7 @@ for i in range(len(noised_data)):
             d_vector = np.dot(vector , value)
             vector = npylist[result[0]][2]
             p_vector = np.dot(vector ,value)
-            if True:
+            if p_vector < d_vector:
                 print(f"\
                         Noised Sentence ---> {noised_data[i][1]}\n \
                         Actual Sentence ---> {npylist[i][1]}\n \

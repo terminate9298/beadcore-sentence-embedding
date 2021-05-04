@@ -22,7 +22,7 @@ sentence = ''
 
 while sentence.lower() != 'exit':
     sentence = str(input('Enter the String (ot type Exit) : '))
-    embed = model.encode(sentence)
+    embed = model.encode(sentence , normalize_embeddings = True)
     product = np.dot(embeddings , embed)
     max_loc = np.argpartition(product, -5)[-5:]
     max_loc = max_loc[np.argsort(product[max_loc])]
